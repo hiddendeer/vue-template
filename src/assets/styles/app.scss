@@ -1,0 +1,21 @@
+html {
+    height: 100%;
+
+    body {
+        height: 100%;
+        color: #000000d9;
+        font-size: 12px;
+        font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Helvetica Neue, Arial, Noto Sans, sans-serif, apple color emoji,
+            segoe ui emoji, Segoe UI Symbol, noto color emoji, sans-serif;
+        font-feature-settings: "tnum";
+        background-color: #f6f8fa;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#app {
+    overflow: hidden;
+    height: 100%;
+}

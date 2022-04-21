@@ -1,55 +1,30 @@
 <template>
-  <div style="height: 100%">
-      <el-row :gutter="20">
-    <el-col :span="6"><div class="grid-content bg-purple" /></el-col>
-    <el-col :span="6"><div class="grid-content bg-purple" /></el-col>
-    <el-col :span="6"><div class="grid-content bg-purple" /></el-col>
-    <el-col :span="6"><div class="grid-content bg-purple" /></el-col>
-  </el-row>
-  </div>
+<div>
+  <m-modal v-model="modalShow" title="模态框标题" align="center" width="30%">
+    <template #content> 这是内容区域 </template>
+    <template #footer>
+      <m-button
+        size="small"
+        style="margin-right: 15px"
+        @click="modalShow = false"
+        >取消</m-button
+      >
+      <m-button type="primary" size="small" @click="modalShow = false"
+        >确认</m-button
+      >
+    </template>
+  </m-modal>
+</div>
+  
 </template>
 
 <script setup>
-import { reactive, getCurrentInstance } from "vue";
-const instance = getCurrentInstance()
-
-const obj = {
-  user: '陈大猫啊'
-}
-
-// 获取列表
-
-const b = reactive({a:1})
-const openLoading = () => {
-
+import mModal from "@/components/modal.vue"
+import { ref } from "vue";
+const modalShow = ref(true);
+const openModal = () => {
+  modalShow.value = true;
 };
-</script>
 
-<style scoped>
-.el-row {
-  margin-bottom: 20px;
-}
-.el-row:last-child {
-  margin-bottom: 0;
-}
-.el-col {
-  border-radius: 4px;
-}
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.bg-purple-light {
-  background: #e5e9f2;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
-}
-</style>
+
+</script>
