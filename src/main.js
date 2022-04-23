@@ -25,7 +25,7 @@ for (const iconName in ElIconModules) {
 
 app.use(Quasar, {
   plugins: { Dialog, Notify, LoadingBar }, // import Quasar plugins and add here
-  lang: quasarLang,
+  lang: quasarLang
 })
 
 app.use(router).use(store)

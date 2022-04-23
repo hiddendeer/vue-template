@@ -1,6 +1,6 @@
 <template>
 <div>
-  <m-modal v-model="modalShow" title="模态框标题" align="center" width="30%">
+  <!-- <m-modal v-model="modalShow" title="模态框标题" align="center" width="30%">
     <template #content> 这是内容区域 </template>
     <template #footer>
       <m-button
@@ -13,7 +13,8 @@
         >确认</m-button
       >
     </template>
-  </m-modal>
+  </m-modal> -->
+    <q-btn color="info">111</q-btn>
 </div>
   
 </template>
@@ -21,7 +22,7 @@
 <script setup>
 import mModal from "@/components/modal.vue"
 import { ref } from "vue";
-const modalShow = ref(true);
+const modalShow = ref(false);
 const openModal = () => {
   modalShow.value = true;
 };
