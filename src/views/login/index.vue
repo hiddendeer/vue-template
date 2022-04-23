@@ -1,13 +1,18 @@
 <template>
-  <div class="contain">
-    <el-row :gutter="20" style="height: 100%">
+  <div class="h-full bg-f5-gray">
+    <el-row :gutter="20" class="h-full">
       <el-col :span="10">
-        <div class="login_left">
-          <div class="account_info">
+        <div class="h-full p-20">
+          <div class="h-full">
             <el-row :gutter="20">
-              <el-col :span="24" class="view_info">
-                <img class="logo_info" />
-                <div class="text_info">伟岸纵横</div>
+              <el-col :span="24" class="mt-14 mb-14 leading-10 tracking-normal">
+                <img class="logo_info m-auto" />
+                <div
+                  class="text-center h-6 text-lg font-medium leading-9"
+                  style="letter-spacing: 12px; color: #9f9b94"
+                >
+                  伟岸纵横
+                </div>
               </el-col>
             </el-row>
             <div class="input_info">
@@ -45,15 +50,17 @@
                   color="btn"
                   label="登录"
                   type="submit"
-                  style="width: 100%; padding: 10px 0"
-                ></q-btn>
+                  icon-right="send"
+                  class="btn_style"
+                >
+                </q-btn>
               </div>
             </div>
           </div>
         </div>
       </el-col>
       <el-col :span="14">
-        <div class="login_right"></div>
+        <div class="h-full login_right"></div>
       </el-col>
     </el-row>
   </div>
@@ -123,45 +130,20 @@ const trggerValidate = () => {
 </script>
 
 <style lang="scss" scoped>
-.contain {
-  height: 100%;
-  background-color: #f5f5f5;
-}
-.login_right {
-  height: 100%;
-  background: url("@/assets/images/login_right.png");
-}
-.login_left {
-  height: 100%;
-  padding: 5rem;
-  .account_info {
-    height: 100%;
-    .view_info {
-      margin: 60px 0 60px 0;
-      line-height: 2.5rem;
-      letter-spacing: normal;
-      .logo_info {
-        width: 252px;
-        height: 55px;
-        margin: auto;
-        image-rendering: -webkit-optimize-contrast;
-        content: url("@/assets/images/v3logo.png");
-      }
-      .text_info {
-        text-align: center;
-        height: 25px;
-        font-size: 18px;
-        font-weight: 500;
-        color: #9f9b94;
-        line-height: 30px;
-        letter-spacing: 12px;
-      }
-    }
-  }
+.logo_info {
+  width: 252px;
+  height: 55px;
+  image-rendering: -webkit-optimize-contrast;
+  content: url("@/assets/images/v3logo.png");
 }
 
-.input_padding {
-  padding: 20px;
+.login_right {
+  background: url("@/assets/images/login_right.png");
+}
+
+.btn_style {
+  width: 100%;
+  padding: 10px 0
 }
 
 .input_info .q-field :deep(.q-field__inner) .q-field__control {

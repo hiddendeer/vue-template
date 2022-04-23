@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, createWebHistory } from "vue-router"
 // 加载栏配置
-import { LoadingBar } from 'quasar'
+import { LoadingBar, setCssVar } from 'quasar'
 
 import menuRouter from "./menu.js";
 import singeRouter from "./singe.js";
@@ -22,8 +22,9 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     // 加载条
+    setCssVar('info', '#a27b3e')
     LoadingBar.setDefaults({
-        color: 'purple',
+        color: 'info',
         size: '3px',
         position: 'top'
     })
